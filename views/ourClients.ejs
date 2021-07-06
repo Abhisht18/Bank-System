@@ -1,0 +1,24 @@
+<%- include("header") -%>
+<div class="table-data">
+<table class="table table-success table-striped mt-3">
+    <thead>
+        <tr>
+          <th style="width:10%" scope="col">ID</th>
+          <th style="width:30%" scope="col">Name</th>
+          <th style="width:40%" scope="col">Email ID</th>
+          <th style="width:20%" scope="col">Balance</th>
+        </tr>
+    </thead> 
+    <tbody>
+        <% clientss.forEach(function(oneClient){ %>
+            <tr>
+                <th scope="row"><%= oneClient.id %></th>
+                <td><%= oneClient.name %></td>
+                <td><%= oneClient.email %></td>
+                <td><%= oneClient.balance %></td>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>
+</div>
+<%- include("footer") -%>
